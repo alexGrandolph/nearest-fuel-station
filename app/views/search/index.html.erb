@@ -1,0 +1,24 @@
+<h1>Search index page</h1>
+
+Name: <%= @station.name %><br>
+
+Address: <%= @station.street_address %><br>
+
+
+Fuel Type: <%= @station.fuel_type %><br>
+
+Access Times: <%= @station.access_times %><br>
+
+
+<h5>Directions Info:</h5>
+
+<%= @route.distance %><br>
+
+<%= @route.time %><br>
+
+Step by Step <br>
+
+<% @route.directions.each do |step| %>
+  <%= step %><br>
+
+<% end %>
